@@ -62,6 +62,7 @@ if %errorlevel% NEQ 0 (
         echo    [+] Dumping RAM...
 
         mkdir ..\..\evidences\memdump
+        winpmem64.exe ..\..\evidences\memdump\memdump.raw > ..\..\logs\memdump.log
 
         echo        [-] Saved memory dump to: evidences/memdump.raw
         echo        [-] Saved memory dump logs to: logs/memdump.log
@@ -93,20 +94,20 @@ if %errorlevel% NEQ 0 (
         echo        [-] Saved ETL evidences to: evidences/ETLs
         echo.
 
+        :: Processes
         echo    [+] Saving all process tree...
         tasklist /v > ..\..\evidences\tasklist.txt
 
         echo        [-] Saved all process list to: evidences/tasklist.txt
         echo.
-
+        :: Network Connections
         echo    [+] Saving all connections list...
         netstat -ano > ..\..\evidences\netstat.txt
 
         echo        [-] Saved all connections list to: evidences/netstat.txt
         echo.
 
-
-
+        ::Finish
         echo    [+] Done, you can find the evidences in the evidences folder. 
         echo.
         echo    [$] Enjoy! [$]
@@ -169,6 +170,21 @@ if %errorlevel% NEQ 0 (
         echo.
         echo    [+] Done, you can find the evidences in the evidences folder. 
 
+    
+        :: Processes
+        echo    [+] Saving all process tree...
+        tasklist /v > ..\..\evidences\tasklist.txt
+
+        echo        [-] Saved all process list to: evidences/tasklist.txt
+        echo.
+        :: Network Connections
+        echo    [+] Saving all connections list...
+        netstat -ano > ..\..\evidences\netstat.txt
+
+        echo        [-] Saved all connections list to: evidences/netstat.txt
+        echo.
+
+        ::Finish
         echo.
         echo    [$] Enjoy! [$]
         echo.
