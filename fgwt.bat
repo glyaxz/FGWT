@@ -54,8 +54,8 @@ if %errorlevel% NEQ 0 (
         echo        [-] OS Domain: %USERDOMAIN%
         
         systeminfo /fo csv > ..\..\evidences\sysinfo.csv
-
-        echo    [+] Saved system information to: evidences/sysinfo.txt
+        echo.
+        echo        [-] Saved system information to: evidences/sysinfo.csv
         echo.
 
         :: Memory Dump
