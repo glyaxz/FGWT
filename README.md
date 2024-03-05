@@ -8,7 +8,8 @@ FGWT is a command-line toolkit for Windows that allows you to collect digital ev
     - Registry
     - Network
     - Process
-
+    - System Information
+    - ETLs
 
 ## Usage
 You need to run the `fgwt.bat` command with the following options:
